@@ -10,6 +10,19 @@ public class Compte {
 		this.numeroCompte = numeroCompte;
 		this.solde = solde;
 	}
+	
+
+//    public String getNumero() {
+//        return numero;
+//    }
+//
+//    public double getSolde() {
+//        return solde;
+//    }
+//
+//    public void setSolde(double solde) {
+//        this.solde = solde;
+//    }
 
 	@Override
 	public String toString() {
