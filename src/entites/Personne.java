@@ -11,11 +11,31 @@ public class Personne {
 		nom = nvnom;
 		prenom = nvprenom;
 		adrpostale = nvadrpostale; 
+	}
 	
+	public String getNom() {
+		return this.nom;
+	}
+	
+	public String getPrenom() {
+		return prenom.toUpperCase();
+	}
+	
+	public AdressePostale getAdresse() {
+		return this.adrpostale;
+	}
+	
+	public void setPrenom(String nvprenom) {
+		prenom = nvprenom; 
+	}
+	
+	public void setadrpostale(AdressePostale nvadrpostale) {
+		adrpostale = nvadrpostale; 
 	}
 	
 	
 	
+
 	@Override
 	public String toString() {
 		return "Personne : nom=" + nom + ", prenom=" + prenom + ", adrpostale=" + adrpostale;
