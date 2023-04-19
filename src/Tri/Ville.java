@@ -1,5 +1,7 @@
 package Tri;
 
+import java.util.Objects;
+
 public class Ville implements Comparable<Ville>{
     private String nom;
     private Integer nbHabitants;
@@ -38,5 +40,18 @@ public class Ville implements Comparable<Ville>{
 	}
 	
 	
+	
+	@Override
+	public boolean equals(Object obj) {
+	    if (this == obj) {
+	        return true;
+	    }
+	    if (!(obj instanceof Ville)) {
+	        return false;
+	    }
+	    Ville other = (Ville) obj;
+	    return Objects.equals(nom, other.nom) && Objects.equals(nbHabitants, other.nbHabitants);
+	}
+
 	
 }
