@@ -5,6 +5,13 @@ import java.util.Objects;
 public class Ville implements Comparable<Ville>{
     private String nom;
     private Integer nbHabitants;
+    private Continent continent;
+    
+    public Ville(String nom, Integer nbHabitants, Continent continent) {
+        this.nom = nom;
+        this.nbHabitants = nbHabitants;
+        this.continent = continent;
+    }
 
     public Ville(String nom, Integer nbHabitants) {
         this.nom = nom;
@@ -34,10 +41,10 @@ public class Ville implements Comparable<Ville>{
 		return this.nbHabitants.compareTo(o.getNbHabitants());
 	}
 
-	@Override
-	public String toString() {
-		return "Ville nom = " + nom + ", nbHabitants=" + nbHabitants;
-	}
+//	@Override
+//	public String toString() {
+//		return "Ville nom = " + nom + ", nbHabitants=" + nbHabitants;
+//	}
 	
 	
 	
@@ -52,6 +59,21 @@ public class Ville implements Comparable<Ville>{
 	    Ville other = (Ville) obj;
 	    return Objects.equals(nom, other.nom) && Objects.equals(nbHabitants, other.nbHabitants);
 	}
+	
+	
+	
+	 public Continent getContinent() {
+	        return continent;
+	    }
+	    
+	    public void setContinent(Continent continent) {
+	        this.continent = continent;
+	    }
+	    
+	    public String toString() {
+	        return nom + " (" + continent.getLibelle() + ")";
+	    }
+	}
 
 	
-}
+
